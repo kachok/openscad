@@ -2,12 +2,18 @@
 // https://www.mcmaster.com/damper-control-handles
 
 
+
+
 difference(){
 //ring around damper bolt
 difference(){
 cylinder(10,10,10);
-translate ([0,0,-5]) cylinder(20,4,4);
+
+//translate ([0,0,-5]) cylinder(20,4,4);
+translate ([-4,-5,-5]) cube([8,10,30]);    
 }
+
+
 
 //holes for fixing bolts
 union(){ 
@@ -23,6 +29,6 @@ translate([-10,0,5])
 
 //handle with hole in it
 difference(){
-translate([-5,5,2.5]) cube([10,40,5]);
+translate([-5,5,0]) cube([10,40,5]);
 translate([0,40,0]) cylinder(10,2,2);
 }
