@@ -1,5 +1,5 @@
-use <dotSCAD-2.2/src/voronoi2d.scad>;
-use <dotSCAD-2.2/src/hollow_out.scad>;
+use <dotSCAD-2.2.1/src/voronoi2d.scad>;
+use <dotSCAD-2.2.1/src/hollow_out.scad>;
 
 module plate(x,y,density,overflow, thickness, height, border){
 
@@ -24,11 +24,11 @@ hollow_out(shell_thickness = border) square([x, y]);
 };
 
 
-//plate(90, 340, 1, 0.1, 3, 3, 4);
-//plate(90, 340, 4, 0.1, 1, 2, 4);
+plate(80, 300, 1, 0.1, 3, 3, 4);
+plate(80, 300, 4, 0.1, 1, 2, 4);
 
 
 //sample
 
-plate(90, 45, 1, 0.1, 3, 3, 4);
-plate(90, 45, 4, 0.1, 1, 2, 4);
+//plate(60, 30, 1, 0.1, 3, 3, 4);
+//plate(90, 45, 4, 0.1, 1, 2, 4);
