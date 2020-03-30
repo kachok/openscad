@@ -5,6 +5,8 @@ one_u=44.45;
 rack_width=240;
 rack_height=1*one_u;
 
+walls_thickness=3;
+
 
 //(158 × 101 × 25 mm)
 device_width=158+1; //?
@@ -21,10 +23,11 @@ difference(){
 difference(){
 union(){
 //faceplate
-cube([rack_width,rack_height,3]);
+cube([rack_width,rack_height,walls_thickness]);
     
 //device support    
-translate([(rack_width-device_width)/2-3+offset,15/2-3,0]) cube([device_width+6,support_depth+6,support_depth]);
+translate([(rack_width-device_width)/2-walls_thickness+offset,rack_height/2-(device_height/2+walls_thickness),0]) 
+    cube([device_width+2*walls_thickness,device_height+2*walls_thickness,support_depth]);
 }
 
 // device number
@@ -33,7 +36,9 @@ color("black") translate ([32,one_u/2+text_size/2,-10]) linear_extrude(15) mirro
 }
 
 //device face/hole
-translate([(rack_width-device_width)/2+offset,15/2,-2]) cube([device_width,support_depth,device_depth]);
+//translate([(rack_width-device_width)/2+offset,device_height/2,-2]) 
+translate([(rack_width-device_width)/2+offset,rack_height/2-(device_height/2),-2]) 
+    cube([device_width,device_height,device_depth]);
 }
 
 

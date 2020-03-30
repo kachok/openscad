@@ -27,12 +27,12 @@ module cover(length){
 
 
 //top left
-translate([0,20,0]) rotate([90,0,180]) cover(110);
+translate([0,20,0]) rotate([90,0,180]) cover(90);
 translate([0,0,0]) rotate([90,0,90]) cover(80);
 translate([-20,0,0]) cube([20,20,4]);
 
 //under handle
-cover(80);
+//cover(80);
 
 //bottom left
 //translate([0,20,0]) rotate([90,0,180]) cover(110);
