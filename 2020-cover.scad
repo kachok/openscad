@@ -27,12 +27,16 @@ module cover(length){
 
 
 //top left
-translate([0,20,0]) rotate([90,0,180]) cover(90);
-translate([0,0,0]) rotate([90,0,90]) cover(80);
-translate([-20,0,0]) cube([20,20,4]);
+//translate([0,20,0]) rotate([90,0,180]) cover(90);
+//translate([0,0,0]) rotate([90,0,90]) cover(80);
+//translate([-20,0,0]) cube([20,20,4]);
 
 //under handle
 //cover(80);
+
+//cover with overhang
+translate([0,20,0]) rotate([90,0,180])  cover(10);
+translate([0,20,0]) cube([15,10,4]);
 
 //bottom left
 //translate([0,20,0]) rotate([90,0,180]) cover(110);
