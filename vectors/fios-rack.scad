@@ -1,23 +1,23 @@
 include <dotSCAD-2.1/src/rounded_square.scad>;
 
-// Rack for Raspberry Pi blade system
+// Rack for FIOS router/wifi
 
 module rack(){
 one_u=44.45;
 
-rack_width=240;
-rack_height=3*one_u;
+rack_width=120;
+rack_height=6*one_u;
 
 walls_thickness=3;
 
 //(158 × 101 × 25 mm)
-device_width=160+1; //?
-device_height=100+1; //?
+device_width=60+1; //?
+device_height=230+1; //?
 device_depth=120; //? this is only used to make a hole
 
 support_depth=85;
 
-offset=12; // shift device on the plate a bit
+offset=0; // shift device on the plate a bit
 
 difference(){
 difference(){
@@ -33,11 +33,11 @@ translate([(rack_width-device_width)/2-walls_thickness+offset,rack_height/2-(dev
 }
 
 // device number
-translate([30,37.5,-2]) 
-mirror([0,1,0])
-linear_extrude(height = 10)
-   resize([16,20]) 
-   import (file = "/Users/dkachaev/Dropbox/raspberrypi_logo.dxf", scale=0.1);
+//translate([30,37.5,-2]) 
+//mirror([0,1,0])
+//linear_extrude(height = 10)
+//   resize([16,20]) 
+//   import (file = "/Users/dkachaev/Dropbox/raspberrypi_logo.dxf", scale=0.1);
 }
 
 //device face/hole
@@ -55,9 +55,9 @@ translate([13,one_u/2,-1]) cylinder(10,2.5,2.5);
 
 translate([rack_width-13,one_u/2,-1]) cylinder(10,2.5,2.5);
 
-translate([13,one_u/2+2*one_u,-1]) cylinder(10,2.5,2.5);
+translate([13,one_u/2+5*one_u,-1]) cylinder(10,2.5,2.5);
 
-translate([rack_width-13,one_u/2+2*one_u,-1]) cylinder(10,2.5,2.5);
+translate([rack_width-13,one_u/2+5*one_u,-1]) cylinder(10,2.5,2.5);
 
 }
 
