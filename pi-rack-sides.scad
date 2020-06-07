@@ -10,13 +10,13 @@ rack_height=3*one_u;
 walls_thickness=3;
 
 //(158 × 101 × 25 mm)
-device_width=150; //?
+device_width=175; //?
 device_height=100; //?
 device_depth=50; //? this is only used to make a hole
 
 support_depth=85;
     
-offset=15; // shift device on the plate a bit
+offset=7; // shift device on the plate a bit
 
 $fn=24;
 
@@ -32,7 +32,7 @@ module left_bracket()
             translate([13,one_u/2+2*one_u,-1]) cylinder(10,2.5,2.5);
             
             // device number
-            translate([30,37.5,-2]) 
+            translate([16,10+rack_height/2,-2]) 
             mirror([0,1,0])
             linear_extrude(height = 10)
                resize([16,20]) 
@@ -49,24 +49,24 @@ module left_bracket()
 
         union() {
             
-            translate([-10,rack_height-10, 10]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, 20]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, 30]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, 40]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, device_depth-10]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, device_depth-20]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, device_depth-30]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, device_depth-40]) rotate([0,90,0]) cylinder(50,1.25,1.25);
+            translate([-10,rack_height-10, 10]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, 20]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, 30]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, 40]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, device_depth-10]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, device_depth-20]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, device_depth-30]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, device_depth-40]) rotate([0,90,0]) cylinder(50,1.5,1.5);
 
 
-            translate([-10,10, 10]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, 20]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, 30]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, 40]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, device_depth-10]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, device_depth-20]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, device_depth-30]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, device_depth-40]) rotate([0,90,0]) cylinder(50,1.25,1.25);
+            translate([-10,10, 10]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, 20]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, 30]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, 40]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, device_depth-10]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, device_depth-20]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, device_depth-30]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, device_depth-40]) rotate([0,90,0]) cylinder(50,1.5,1.5);
 
         }
     }
@@ -89,24 +89,24 @@ module right_bracket()
         }
         union() {
             
-            translate([-10,rack_height-10, 10]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, 20]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, 30]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, 40]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, device_depth-10]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, device_depth-20]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, device_depth-30]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,rack_height-10, device_depth-40]) rotate([0,90,0]) cylinder(50,1.25,1.25);
+            translate([-10,rack_height-10, 10]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, 20]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, 30]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, 40]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, device_depth-10]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, device_depth-20]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, device_depth-30]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,rack_height-10, device_depth-40]) rotate([0,90,0]) cylinder(50,1.5,1.5);
 
 
-            translate([-10,10, 10]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, 20]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, 30]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, 40]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, device_depth-10]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, device_depth-20]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, device_depth-30]) rotate([0,90,0]) cylinder(50,1.25,1.25);
-            translate([-10,10, device_depth-40]) rotate([0,90,0]) cylinder(50,1.25,1.25);
+            translate([-10,10, 10]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, 20]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, 30]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, 40]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, device_depth-10]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, device_depth-20]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, device_depth-30]) rotate([0,90,0]) cylinder(50,1.5,1.5);
+            translate([-10,10, device_depth-40]) rotate([0,90,0]) cylinder(50,1.5,1.5);
 
         }
     }
