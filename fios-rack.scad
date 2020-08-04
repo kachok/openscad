@@ -1,4 +1,4 @@
-// Rack for TP-Link 8 ports Gigabit Ethernet Hub
+// Rack for FIOS network device
 
 one_u=44.45;
 
